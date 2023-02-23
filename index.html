@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS For Beginners</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JS For Beginners</h1>
+    </header>
+    <section class="container">
+      <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+        </div>
+        <input class="btn" type="submit" value="Submit" />
+      </form>
+      <ul id="users">
+        <div id="many-users"></div>
+      </ul>
+      <ul class="items">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+      </ul>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html> -->
+
+<!-- crud crud has been expired -->
+
+<html>
+  <head>
+    <title>Add Dish Price & Name</title>
+    <style>
+      #dishName,
+      #dishPrice {
+        width: 250px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add Dish Price & Name</h1>
+    <h2>Enter Dish Name</h2>
+    <input type="text" id="dishName" placeholder="Enter Dish Name" />
+    <h2>Enter Dish Price</h2>
+    <input type="text" id="dishPrice" placeholder="Enter Dish Price" />
+    <button onclick="addDish()">Add Dish</button>
+    <div id="dishList"></div>
+    <script>
+      function addDish() {
+        //Get Dish Name
+        let dishName = document.getElementById("dishName").value;
+        //Get Dish Price
+        let dishPrice = document.getElementById("dishPrice").value;
+        //Create Dish Div
+        let dishDiv = document.createElement("div");
+        dishDiv.innerHTML = `
+                <p>Dish Name: ${dishName}</p>
+                <p>Dish Price: ${dishPrice}</p>
+            `;
+        //Append Dish Div to Dish List
+        document.getElementById("dishList").appendChild(dishDiv);
+        //Clear Input Fields
+        document.getElementById("dishName").value = "";
+        document.getElementById("dishPrice").value = "";
+      }
+    </script>
+  </body>
+</html>
